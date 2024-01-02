@@ -43,7 +43,7 @@ export default function IndexPage() {
 
   return (
     <main className=" flex bg-gray-20 min-h-screen min-w-0 px-10 py-10 md:px-20 lg:px-40">
-      <section>
+      <section className= "flex flex-col w-full">
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <h1>Other</h1>
 
