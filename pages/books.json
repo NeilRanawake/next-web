@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Unfinished Endeavour of King Rajasinha 1",
+        "author": "Author: Neil Ranawake",
+        "genre": ["Politics", "History", "Other"],
+        "published": "Published: 2000", 
+        "downloadLink": "https://drive.google.com/file/d/1SnoEqZbpvoh6Qd4rzGrJPnM1dElHQhhf/view?usp=drive_link",
+        "imageLink": "/Raja.gif"
+    },
+    {
+        "title": "Split of Czechoslovakia and Tamil Eelam",
+        "author": "Author: Neil Ranawake",
+        "genre": ["Politics","Other"],
+        "published": "Published: 2005",
+        "downloadLink": "https://drive.google.com/file/d/1t4OQMGxzmk1nmKON0x2Ylmm2nVjrmVK7/view?usp=drive_link",
+        "imageLink": "/Czech.gif"
+    }
+]

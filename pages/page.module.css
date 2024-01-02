@@ -1,0 +1,14 @@
+.link{
+    color: Black;
+    }
+    .link:hover{
+        color: red;
+    }
+    
+    #specialLink{
+        color:rgb(7, 212, 212);
+    }
+    
+    #specialLink:hover{
+        color: rgb(228, 56, 185);
+    }
