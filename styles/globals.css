@@ -4,3 +4,12 @@
 @import 'tailwindcss/utilities';
 
 /* Your custom styles go here */
+
+div {
+    opacity: 1;
+  }
+
+  .parent {
+    cursor: auto; /* or any desired cursor value */
+  }
+  
