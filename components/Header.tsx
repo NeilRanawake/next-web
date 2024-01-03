@@ -2,10 +2,12 @@
 import React from "react";
 import Link from "next/link";
 import Styles from "/pages/page.module.css";
-import { Input } from "@mantine/core";
+
 import { useDisclosure } from "@mantine/hooks";
 import { ImSearch } from "react-icons/im";
 import { RxCross1 } from "react-icons/rx";
+import { useState } from 'react';
+import { Input, CloseButton } from '@mantine/core';
 
 interface HeaderProps {
   searchTerm: string;
@@ -33,20 +35,16 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
             placeholder="Search for books..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-           style={{
-             border: "2px solid #ccc",
-             borderRadius: "4px",
-          }}
+            rightSectionPointerEvents="all"
+
+            leftSection={<ImSearch style={{ cursor: "pointer" }} />}
+            
           rightSection={
-            <>
-              {searchTerm && (
-                 <div onClick={handleClearSearch} style={{ cursor: "pointer" }}>
-                 <RxCross1 style={{ opacity: 1, cursor: "pointer" }}/>
-               </div>
-                 
-             )}
-             <ImSearch style={{ cursor: "pointer" }} />
-            </>
+            <CloseButton
+            aria-label="Clear input"
+            onClick={() => setSearchTerm('')}
+            style={{ display: searchTerm ? undefined : 'none' }}
+          />
           }
 
           />

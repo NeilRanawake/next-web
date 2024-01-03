@@ -34,12 +34,6 @@ export default function IndexPage() {
     setCurrentPage(page);
   };
 
-
-  const displayedBooks = booksData.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
   const books: Book[] = booksData as Book[];
 
 //export default function Home() {
@@ -53,6 +47,14 @@ export default function IndexPage() {
     setFilteredBooks(filtered);
   }, [searchTerm]);
 
+  useEffect(() => {
+    const displayedBooks = filteredBooks.slice(
+      (currentPage - 1) * itemsPerPage,
+      currentPage * itemsPerPage
+    );
+      
+  }) 
+
 
   return (
     <main className=" flex bg-gray-20 min-h-screen min-w-0 px-10 py-10 md:px-20 lg:px-40">
@@ -63,7 +65,7 @@ export default function IndexPage() {
 
         {/* Grid Container for Books */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
-        {filteredBooks.map((book, index) => (
+        {displayedBooks.map((book, index) => (
           <Book key={index} book={book} />
         ))}
       </div>
